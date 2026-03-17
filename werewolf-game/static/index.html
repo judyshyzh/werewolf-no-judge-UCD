@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>狼人杀（没有法官时）</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="title">狼人杀（没有法官时）</div>
+        <div class="sub">浏览器多人联机 · 房主当上帝控流程</div>
+      </header>
+
+      <section class="card" id="connectCard">
+        <div class="row">
+          <div class="field">
+            <label>你的名字</label>
+            <input id="nameInput" placeholder="例如：彤彤" maxlength="20" />
+          </div>
+          <div class="field">
+            <label>房间号（加入用）</label>
+            <input id="codeInput" placeholder="例如：A3K9Q" maxlength="10" />
+          </div>
+        </div>
+        <div class="row actions">
+          <button id="createBtn" class="primary">创建房间（当房主）</button>
+          <button id="joinBtn">加入房间</button>
+        </div>
+        <div class="hint" id="connectHint"></div>
+      </section>
+
+      <section class="card hidden" id="roomCard">
+        <div class="roomTop">
+          <div>
+            <div class="k">房间号</div>
+            <div class="v mono" id="roomCode">-----</div>
+          </div>
+          <div>
+            <div class="k">阶段</div>
+            <div class="v" id="phase">-</div>
+          </div>
+          <div>
+            <div class="k">你的身份</div>
+            <div class="v" id="role">（未开始）</div>
+          </div>
+        </div>
+
+        <div class="split">
+          <div class="panel">
+            <div class="panelTitle">玩家</div>
+            <div id="players"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panelTitle">操作</div>
+            <div id="controls"></div>
+            <div class="logTitle">消息</div>
+            <div id="log" class="log"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="/static/client.js"></script>
+  </body>
+</html>
